@@ -3,48 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/usage/usage/</loc>
+    <loc>https://reacli.github.io/usage/usage/</loc>
     <lastmod>2019-02-18T19:57:39+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/installation/requirements/</loc>
+    <loc>https://reacli.github.io/installation/requirements/</loc>
     <lastmod>2019-02-18T19:33:40+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/installation/</loc>
+    <loc>https://reacli.github.io/installation/</loc>
     <lastmod>2019-02-18T19:29:42+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/installation/install/</loc>
+    <loc>https://reacli.github.io/installation/install/</loc>
     <lastmod>2019-02-18T19:44:08+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/usage/</loc>
+    <loc>https://reacli.github.io/usage/</loc>
     <lastmod>2019-02-18T19:42:22+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/credits/</loc>
+    <loc>https://reacli.github.io/credits/</loc>
     <lastmod>2019-02-18T20:38:13+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://reacli.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://reacli.github.io/</loc>
     <lastmod>2019-02-18T19:57:39+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://reacli.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   

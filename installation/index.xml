@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Installation on Reacli</title>
-    <link>http://example.org/installation/</link>
+    <link>https://reacli.github.io/installation/</link>
     <description>Recent content in Installation on Reacli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
     <lastBuildDate>Mon, 18 Feb 2019 19:29:42 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/installation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://reacli.github.io/installation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Requirements</title>
-      <link>http://example.org/installation/requirements/</link>
+      <link>https://reacli.github.io/installation/requirements/</link>
       <pubDate>Mon, 18 Feb 2019 19:33:40 +0100</pubDate>
       
-      <guid>http://example.org/installation/requirements/</guid>
+      <guid>https://reacli.github.io/installation/requirements/</guid>
       <description>npm As a requirement, all you need is having npm installed.
 npx You also might want using Reacli thanks to npx, so it can be useful to install it:
 npm install npx  yarn This package can also be installed using yarn.</description>
@@ -24,10 +24,10 @@ npm install npx  yarn This package can also be installed using yarn.</descriptio
     
     <item>
       <title>Install</title>
-      <link>http://example.org/installation/install/</link>
+      <link>https://reacli.github.io/installation/install/</link>
       <pubDate>Mon, 18 Feb 2019 19:44:08 +0100</pubDate>
       
-      <guid>http://example.org/installation/install/</guid>
+      <guid>https://reacli.github.io/installation/install/</guid>
       <description> If you want to use Reacli without running npx, it has to be installed globally either with npm or yarn.
 Using npm To install Reacli globally with npm, run:
 npm install -g reacli  Using yarn To install Reacli globally with yarn, run:

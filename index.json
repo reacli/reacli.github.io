@@ -1,62 +1,62 @@
 [
 {
-	"uri": "http://example.org/usage/usage/",
+	"uri": "https://reacli.github.io/usage/usage/",
 	"title": "Usage",
 	"tags": [],
 	"description": "",
 	"content": " If Reacli is installed globally If you have installed Reacli globally (see installation), you can directly use Reacli like:\nreacli component path/to/my/component  If you did not install Reacli You don\u0026rsquo;t need to have Reacli installed globally to use it. You can use npx to run it wherever you want:\nnpx reacli component path/to/my/component  "
 },
 {
-	"uri": "http://example.org/installation/requirements/",
+	"uri": "https://reacli.github.io/installation/requirements/",
 	"title": "Requirements",
 	"tags": [],
 	"description": "",
 	"content": " npm As a requirement, all you need is having npm installed.\nnpx You also might want using Reacli thanks to npx, so it can be useful to install it:\nnpm install npx  yarn This package can also be installed using yarn.\n"
 },
 {
-	"uri": "http://example.org/installation/",
+	"uri": "https://reacli.github.io/installation/",
 	"title": "Installation",
 	"tags": [],
 	"description": "",
 	"content": " Part 1 Installation Discover how to install Reacli and use it in all your React projects.\n"
 },
 {
-	"uri": "http://example.org/installation/install/",
+	"uri": "https://reacli.github.io/installation/install/",
 	"title": "Install",
 	"tags": [],
 	"description": "",
 	"content": " If you want to use Reacli without running npx, it has to be installed globally either with npm or yarn.\nUsing npm To install Reacli globally with npm, run:\nnpm install -g reacli  Using yarn To install Reacli globally with yarn, run:\nyarn global add reacli  "
 },
 {
-	"uri": "http://example.org/usage/",
+	"uri": "https://reacli.github.io/usage/",
 	"title": "Usage",
 	"tags": [],
 	"description": "",
 	"content": " Part 2 Usage Let\u0026rsquo;s see how to create things thanks to the magic of Reacli.\n"
 },
 {
-	"uri": "http://example.org/credits/",
+	"uri": "https://reacli.github.io/credits/",
 	"title": "Credits",
 	"tags": [],
 	"description": "",
 	"content": "The Reacli project was initiated and is maintained by:\n Florian ADONIS (tanohzana, @florian_adonis) Gautier DARCHEN (gdarchen, @GDarchen) Léo CORNILLON (leocornillon, @leo_cornillon)  "
 },
 {
-	"uri": "http://example.org/categories/",
+	"uri": "https://reacli.github.io/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://example.org/",
+	"uri": "https://reacli.github.io/",
 	"title": "Reacli",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://example.org/tags/",
+	"uri": "https://reacli.github.io/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

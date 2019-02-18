@@ -3,12 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://example.org/usage/usage/</loc>
+    <lastmod>2019-02-18T19:57:39+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/requirements/</loc>
+    <lastmod>2019-02-18T19:33:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/</loc>
+    <lastmod>2019-02-18T19:29:42+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/installation/install/</loc>
+    <lastmod>2019-02-18T19:44:08+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/usage/</loc>
+    <lastmod>2019-02-18T19:42:22+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/credits/</loc>
+    <lastmod>2019-02-18T20:38:13+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://example.org/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://example.org/</loc>
+    <lastmod>2019-02-18T19:57:39+01:00</lastmod>
     <priority>0</priority>
   </url>
   

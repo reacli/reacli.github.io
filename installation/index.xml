@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reacli</title>
-    <link>http://example.org/</link>
-    <description>Recent content on Reacli</description>
+    <title>Installation on Reacli</title>
+    <link>http://example.org/installation/</link>
+    <description>Recent content in Installation on Reacli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 18 Feb 2019 19:57:39 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 18 Feb 2019 19:29:42 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/installation/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Usage</title>
-      <link>http://example.org/usage/usage/</link>
-      <pubDate>Mon, 18 Feb 2019 19:57:39 +0100</pubDate>
-      
-      <guid>http://example.org/usage/usage/</guid>
-      <description> If Reacli is installed globally If you have installed Reacli globally (see installation), you can directly use Reacli like:
-reacli component path/to/my/component  If you did not install Reacli You don&amp;rsquo;t need to have Reacli installed globally to use it. You can use npx to run it wherever you want:
-npx reacli component path/to/my/component  </description>
-    </item>
     
     <item>
       <title>Requirements</title>

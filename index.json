@@ -4,7 +4,7 @@
 	"title": "Usage",
 	"tags": [],
 	"description": "",
-	"content": " If Reacli is installed globally If you have installed Reacli globally (see installation), you can directly use it like this:\nreacli component path/to/my/component  If you did not install Reacli You don\u0026rsquo;t need to have Reacli installed globally to use it. You can use npx to run it wherever you want:\nnpx reacli component path/to/my/component  "
+	"content": " If Reacli is installed globally Once you have Reacli globally installed (see installation), you can directly use it like this:\nreacli component path/to/my/component  If you did not install Reacli You don\u0026rsquo;t need to have Reacli installed globally to use it. You can use npx to run it wherever you want:\nnpx reacli component path/to/my/component  "
 },
 {
 	"uri": "https://reacli.github.io/installation/requirements/",

@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Usage</title>
+      <title>Use Reacli</title>
       <link>https://reacli.github.io/usage/usage/</link>
       <pubDate>Mon, 18 Feb 2019 19:57:39 +0100</pubDate>
       
@@ -20,6 +20,17 @@
       <description> If Reacli is installed globally Once you have Reacli globally installed (see installation), you can directly use it like this:
 reacli component path/to/my/component  If you did not install Reacli You don&amp;rsquo;t need to have Reacli installed globally to use it. You can use npx to run it wherever you want:
 npx reacli component path/to/my/component  </description>
+    </item>
+    
+    <item>
+      <title>Component architecture</title>
+      <link>https://reacli.github.io/usage/architecture/</link>
+      <pubDate>Mon, 18 Feb 2019 19:57:39 +0100</pubDate>
+      
+      <guid>https://reacli.github.io/usage/architecture/</guid>
+      <description>Architecture Creating a component with no option (reacli component ./my-super-component) will generate the following architecture:
+. └── my-super-component ├── components | ├── MySuperComponent.jsx | ├── MySuperComponent.css | └── MySuperComponentContainer.jsx └── index.js  Let&amp;rsquo;s describe it a bit.
+index.js We created an index.js at the root of the component folder because we believe that whatever implementation it uses, other projects or components using it should not know, or mind the internal implementation.</description>
     </item>
     
   </channel>

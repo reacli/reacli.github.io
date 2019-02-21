@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Reacli :: Reacli</title>
+    <title>Flow :: Reacli</title>
 
     
     <link href="/css/nucleus.css?1550785098" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/options/flow/">
     <nav id="sidebar" class="">
 
 
@@ -218,7 +218,7 @@
   
     
     <li data-nav-id="/options/" title="Options" class="dd-item 
-        
+        parent
         
         
         ">
@@ -261,7 +261,7 @@
  
   
     
-      <li data-nav-id="/options/flow/" title="Flow" class="dd-item ">
+      <li data-nav-id="/options/flow/" title="Flow" class="dd-item active">
         <a href="/options/flow/">
         Flow
         
@@ -382,28 +382,136 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Reacli</a> > <a href='/options/'>Options</a> > Flow
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#container-component">Container component</a>
+<ul>
+<li><a href="#generated-component">Generated component</a></li>
+<li><a href="#explanation">Explanation</a></li>
+</ul></li>
+<li><a href="#dumb-component">Dumb component</a>
+<ul>
+<li><a href="#generated-component-1">Generated component</a></li>
+<li><a href="#explanation-1">Explanation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>Flow</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
-		<h1>Welcome to <b>Reacli</b></h1>
-		<p>
-		  This is a React CLI that helps with boilerplate.
-		</p>
-		<p>
-			It enables to create React components in one single command, by precising how to configure those generated components.
-		</p>
 
-		Let's see how to <a href='/installation/install'>install</a> it!
-  
+
+<p>Some users might want to type their components with <a href="https://flow.org/"><code>flow</code></a>.</p>
+
+<p>To create a <code>flow</code>-typed component, just use <strong>Reacli</strong> with either the <code>--flow</code> or the <code>-f</code> option:</p>
+
+<pre><code class="language-bash">reacli component ./my-super-component -f
+</code></pre>
+
+<p>It will generate a structure like this:</p>
+
+<pre><code class="language-text">    .
+    └── my-super-component
+        ├── components
+        |   ├── MySuperComponent.jsx
+        |   ├── MySuperComponent.css
+        |   └── MySuperComponentContainer.jsx
+        └── index.js
+</code></pre>
+
+<h2 id="container-component">Container component</h2>
+
+<h3 id="generated-component">Generated component</h3>
+
+<p><img src="/options/images/flow-container-component.png?width=70%" alt="flow-container-component" /></p>
+
+<h3 id="explanation">Explanation</h3>
+
+<ul>
+<li>First, we set the <code>// @flow</code> annotation to configure the component to be <code>flow</code>-typed</li>
+<li>We create <code>Props</code> and <code>State</code> types, in which we will type our component props or type.</li>
+<li>Then, we pass those types to the generic <code>Component</code> class.</li>
+<li>We also create a static object called <code>defaultProps</code> in which we will be able to add some values to the component props that are not required.</li>
+</ul>
+
+<h2 id="dumb-component">Dumb component</h2>
+
+<h3 id="generated-component-1">Generated component</h3>
+
+<p><img src="/options/images/flow-dumb-component.png?width=70%" alt="flow-dumb-component" /></p>
+
+<h3 id="explanation-1">Explanation</h3>
+
+<ul>
+<li>Here again, we set the <code>// @flow</code> annotation to configure the component to be <code>flow</code>-typed</li>
+<li>We then configure the <code>Props</code> type to contain one optional prop called <code>value1</code> of type <code>string</code></li>
+<li>The dumb component is a functional one, and we type its input as being of the <code>Props</code> type</li>
+<li>Finally, we set the <code>defaultProps</code> to configure the default values for the props that are not required (an empty string for the <code>value1</code> prop)</li>
+</ul>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
         
         </div> 
         
@@ -534,6 +642,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -546,6 +655,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -563,6 +675,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -578,6 +691,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -623,8 +739,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/options/intro/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/installation/" title="Installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/options/redux/" title="Redux" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

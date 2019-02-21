@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Reacli :: Reacli</title>
+    <title>Scss :: Reacli</title>
 
     
     <link href="/css/nucleus.css?1550785098" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/options/scss/">
     <nav id="sidebar" class="">
 
 
@@ -218,7 +218,7 @@
   
     
     <li data-nav-id="/options/" title="Options" class="dd-item 
-        
+        parent
         
         
         ">
@@ -299,7 +299,7 @@
  
   
     
-      <li data-nav-id="/options/scss/" title="Scss" class="dd-item ">
+      <li data-nav-id="/options/scss/" title="Scss" class="dd-item active">
         <a href="/options/scss/">
         Scss
         
@@ -382,28 +382,112 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Reacli</a> > <a href='/options/'>Options</a> > Scss
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#explanation">Explanation</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>Scss</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
-		<h1>Welcome to <b>Reacli</b></h1>
-		<p>
-		  This is a React CLI that helps with boilerplate.
-		</p>
-		<p>
-			It enables to create React components in one single command, by precising how to configure those generated components.
-		</p>
 
-		Let's see how to <a href='/installation/install'>install</a> it!
-  
+
+<h2 id="explanation">Explanation</h2>
+
+<p>By default, the style file associated to a generated dumb component is a <code>.css</code> file.</p>
+
+<p>Some users might want to use <em>Sass</em>. That is the reason why we added the <code>--scss</code> argument. <em>SCSS</em> is a <em>Sass</em> syntax that is also full compatible with the <em>CSS</em> syntax.</p>
+
+<p>In other words, it means that every valid <em>CSS</em> stylesheet is a valid <em>SCSS</em> file with the same meaning.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>You can generate an <code>.scss</code>-styled component using the following command:</p>
+
+<pre><code class="language-bash">reacli component ./my-super-component --scss
+</code></pre>
+
+<p>It will generate a structure like this:</p>
+
+<pre><code class="language-text">    .
+    └── my-super-component
+        ├── components
+        |   ├── MySuperComponent.jsx
+        |   ├── MySuperComponent.scss
+        |   └── MySuperComponentContainer.jsx
+        └── index.js
+</code></pre>
+
+<p>It will only have an impact on the dumb component, which will look like the following:</p>
+
+<p><img src="/options/images/scss-dumb-component.png?width=70%" alt="scss-dumb-component" /></p>
+
+<p>The only change in the dumb component above shown is the import of the <em>SCSS</em> file instead of the default <em>CSS</em> one.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
         
         </div> 
         
@@ -534,6 +618,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -546,6 +631,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -594,6 +682,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -623,8 +712,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/options/redux/" title="Redux"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/installation/" title="Installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/options/intro/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

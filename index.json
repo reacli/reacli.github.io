@@ -1,10 +1,17 @@
 [
 {
 	"uri": "https://reacli.github.io/usage/usage/",
-	"title": "Usage",
+	"title": "Use Reacli",
 	"tags": [],
 	"description": "",
 	"content": " If Reacli is installed globally Once you have Reacli globally installed (see installation), you can directly use it like this:\nreacli component path/to/my/component  If you did not install Reacli You don\u0026rsquo;t need to have Reacli installed globally to use it. You can use npx to run it wherever you want:\nnpx reacli component path/to/my/component  "
+},
+{
+	"uri": "https://reacli.github.io/options/intro/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "In this part, we will present various options that enables to customize the way Reacli will create your components.\nFor a simplicity reason, we will introduce each option separately.\nPlease be aware that you can combine those options.\n "
 },
 {
 	"uri": "https://reacli.github.io/installation/requirements/",
@@ -21,6 +28,13 @@
 	"content": " Part 1 Installation Discover how to install Reacli and use it in all your React projects.\n"
 },
 {
+	"uri": "https://reacli.github.io/usage/architecture/",
+	"title": "Component architecture",
+	"tags": [],
+	"description": "",
+	"content": " Architecture Creating a component with no option (reacli component ./my-super-component) will generate the following architecture:\n. └── my-super-component ├── components | ├── MySuperComponent.jsx | ├── MySuperComponent.css | └── MySuperComponentContainer.jsx └── index.js  Let\u0026rsquo;s describe it a bit.\nindex.js We created an index.js at the root of the component folder because we believe that whatever implementation it uses, other projects or components using it should not know, or mind the internal implementation.\nTherefore, the sole purpose of index.js is to import the Container, which will then include the Dumb component and export it. For now, we used export default because we think the Container should be the only reference point from outside of the component.\ncomponents folder We put components in a components folder because we believe that a component module can contain services, and common components.\nOther architectures put component files at the root of the module, but we prefer it that way for the aforementioned reasons.\nContainer component We include a container in all components modules because we believe that any method and any state should be implemented in there. The dumb component\u0026rsquo;s purpose should be only to display content.\nThe Container contains a class so we can add a constructor that will initiate the state and pass the props to the super constructor.\nThe Container is the one that will be interacting with Redux if needed (see here) or manage the component logics.\n Dumb component The dumb component receives its props from its container and is able to display HTML according to props.\nWe made it a functional component because we think it should not be stateful, and using consts in JavaScript seems less costy than using classes.\n Style We created a CSS and SCSS (thanks to an option) files so that the user can decide weither they want to use one or the other, then we imported it in the dumb component and stored it in a style variable so we could call it later as a JavaScript object.\nSome call it \u0026ldquo;CSS in JS\u0026rdquo;. We call it \u0026ldquo;useful\u0026rdquo;\u0026hellip;\n"
+},
+{
 	"uri": "https://reacli.github.io/installation/install/",
 	"title": "Install",
 	"tags": [],
@@ -33,6 +47,34 @@
 	"tags": [],
 	"description": "",
 	"content": " Part 2 Usage Let\u0026rsquo;s see how to create things thanks to the magic of Reacli.\n"
+},
+{
+	"uri": "https://reacli.github.io/options/",
+	"title": "Options",
+	"tags": [],
+	"description": "",
+	"content": " Part 3 Use options The Reacli command-line interface enables to create components that exactly match to your needs. This chapter aims at showing how to customize your usage.\n"
+},
+{
+	"uri": "https://reacli.github.io/options/flow/",
+	"title": "Flow",
+	"tags": [],
+	"description": "",
+	"content": " Some users might want to type their components with flow.\nTo create a flow-typed component, just use Reacli with either the --flow or the -f option:\nreacli component ./my-super-component -f  It will generate a structure like this:\n. └── my-super-component ├── components | ├── MySuperComponent.jsx | ├── MySuperComponent.css | └── MySuperComponentContainer.jsx └── index.js  Container component Generated component Explanation  First, we set the // @flow annotation to configure the component to be flow-typed We create Props and State types, in which we will type our component props or type. Then, we pass those types to the generic Component class. We also create a static object called defaultProps in which we will be able to add some values to the component props that are not required.  Dumb component Generated component Explanation  Here again, we set the // @flow annotation to configure the component to be flow-typed We then configure the Props type to contain one optional prop called value1 of type string The dumb component is a functional one, and we type its input as being of the Props type Finally, we set the defaultProps to configure the default values for the props that are not required (an empty string for the value1 prop)  "
+},
+{
+	"uri": "https://reacli.github.io/options/redux/",
+	"title": "Redux",
+	"tags": [],
+	"description": "",
+	"content": " Explanation Some users might want to use React Redux to share props accross components that are at different levels of the DOM.\nRedux needs actions to be dispatched in components. Those actions will then be reduced by reducers.\nUsage You can generate a component connected to the Redux store using the following command:\nreacli component ./my-super-component --redux  It will generate a structure like this:\n. └── my-super-component ├── components | ├── MySuperComponent.jsx | ├── MySuperComponent.css | └── MySuperComponentContainer.jsx └── index.js  Container component Generated component It will only have an impact on the container component, which will look like the following:\nExplanation  First, the connect method is imported from react-redux. It will enable the generated component to interact with the Redux store We then define a mapStateToProps method. In this arrow function (which can take a state variable as input), we will be able to create component props from variables stored in the Redux store The mapDispatchToProps method is optional. It will be used if your component has to dispatch actions Finally, we need to bind our component with the Redux store using the previously imported connect method  If your component does not have to dispatch actions, you can delete the mapDispatchToProps function. In that case, do not forget to also remove it from the connect() call.\n "
+},
+{
+	"uri": "https://reacli.github.io/options/scss/",
+	"title": "Scss",
+	"tags": [],
+	"description": "",
+	"content": " Explanation By default, the style file associated to a generated dumb component is a .css file.\nSome users might want to use Sass. That is the reason why we added the --scss argument. SCSS is a Sass syntax that is also full compatible with the CSS syntax.\nIn other words, it means that every valid CSS stylesheet is a valid SCSS file with the same meaning.\nUsage You can generate an .scss-styled component using the following command:\nreacli component ./my-super-component --scss  It will generate a structure like this:\n. └── my-super-component ├── components | ├── MySuperComponent.jsx | ├── MySuperComponent.scss | └── MySuperComponentContainer.jsx └── index.js  It will only have an impact on the dumb component, which will look like the following:\nThe only change in the dumb component above shown is the import of the SCSS file instead of the default CSS one.\n"
 },
 {
 	"uri": "https://reacli.github.io/credits/",

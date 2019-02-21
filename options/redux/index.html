@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Reacli :: Reacli</title>
+    <title>Redux :: Reacli</title>
 
     
     <link href="/css/nucleus.css?1550785098" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/options/redux/">
     <nav id="sidebar" class="">
 
 
@@ -218,7 +218,7 @@
   
     
     <li data-nav-id="/options/" title="Options" class="dd-item 
-        
+        parent
         
         
         ">
@@ -280,7 +280,7 @@
  
   
     
-      <li data-nav-id="/options/redux/" title="Redux" class="dd-item ">
+      <li data-nav-id="/options/redux/" title="Redux" class="dd-item active">
         <a href="/options/redux/">
         Redux
         
@@ -382,28 +382,131 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Reacli</a> > <a href='/options/'>Options</a> > Redux
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#explanation">Explanation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#container-component">Container component</a>
+<ul>
+<li><a href="#generated-component">Generated component</a></li>
+<li><a href="#explanation-1">Explanation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>Redux</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
-		<h1>Welcome to <b>Reacli</b></h1>
-		<p>
-		  This is a React CLI that helps with boilerplate.
-		</p>
-		<p>
-			It enables to create React components in one single command, by precising how to configure those generated components.
-		</p>
 
-		Let's see how to <a href='/installation/install'>install</a> it!
-  
+
+<h2 id="explanation">Explanation</h2>
+
+<p>Some users might want to use <a href="https://react-redux.js.org/">React Redux</a> to share props accross components that are at different levels of the DOM.</p>
+
+<p><em>Redux</em> needs <em>actions</em> to be dispatched in components. Those actions will then be reduced by <em>reducers</em>.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>You can generate a component connected to the <em>Redux</em> <code>store</code> using the following command:</p>
+
+<pre><code class="language-bash">reacli component ./my-super-component --redux
+</code></pre>
+
+<p>It will generate a structure like this:</p>
+
+<pre><code class="language-text">    .
+    └── my-super-component
+        ├── components
+        |   ├── MySuperComponent.jsx
+        |   ├── MySuperComponent.css
+        |   └── MySuperComponentContainer.jsx
+        └── index.js
+</code></pre>
+
+<h2 id="container-component">Container component</h2>
+
+<h3 id="generated-component">Generated component</h3>
+
+<p>It will only have an impact on the container component, which will look like the following:</p>
+
+<p><img src="/options/images/redux-container-component.png?width=70%" alt="redux-container-component" /></p>
+
+<h3 id="explanation-1">Explanation</h3>
+
+<ul>
+<li>First, the <code>connect</code> method is imported from <code>react-redux</code>. It will enable the generated component to interact with the <em>Redux</em> <code>store</code></li>
+<li>We then define a <code>mapStateToProps</code> method. In this arrow function (which can take a <code>state</code> variable as input), we will be able to create component props from variables stored in the <em>Redux</em> <code>store</code></li>
+<li>The <code>mapDispatchToProps</code> method is optional. It will be used if your component has to dispatch actions</li>
+<li>Finally, we need to bind our component with the <em>Redux</em> <code>store</code> using the previously imported <code>connect</code> method</li>
+</ul>
+
+<div class="notices info" ><p>If your component does <strong>not have to dispatch actions</strong>, you can delete the <strong><code>mapDispatchToProps</code></strong> function.
+In that case, do not forget to also remove it from the <strong><code>connect()</code></strong> call.</p>
+</div>
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
         
         </div> 
         
@@ -534,6 +637,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -546,6 +650,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -579,6 +686,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -594,6 +702,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -623,8 +734,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/options/flow/" title="Flow"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/installation/" title="Installation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/options/scss/" title="Scss" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

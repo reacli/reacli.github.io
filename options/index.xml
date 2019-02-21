@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reacli</title>
-    <link>https://reacli.github.io/</link>
-    <description>Recent content on Reacli</description>
+    <title>Options on Reacli</title>
+    <link>https://reacli.github.io/options/</link>
+    <description>Recent content in Options on Reacli</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 18 Feb 2019 19:57:39 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 20 Feb 2019 19:37:30 +0100</lastBuildDate>
     
-	<atom:link href="https://reacli.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://reacli.github.io/options/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Use Reacli</title>
-      <link>https://reacli.github.io/usage/usage/</link>
-      <pubDate>Mon, 18 Feb 2019 19:57:39 +0100</pubDate>
-      
-      <guid>https://reacli.github.io/usage/usage/</guid>
-      <description> If Reacli is installed globally Once you have Reacli globally installed (see installation), you can directly use it like this:
-reacli component path/to/my/component  If you did not install Reacli You don&amp;rsquo;t need to have Reacli installed globally to use it. You can use npx to run it wherever you want:
-npx reacli component path/to/my/component  </description>
-    </item>
     
     <item>
       <title>Introduction</title>
@@ -32,40 +21,6 @@ npx reacli component path/to/my/component  </description>
 For a simplicity reason, we will introduce each option separately.
 Please be aware that you can combine those options.
  </description>
-    </item>
-    
-    <item>
-      <title>Requirements</title>
-      <link>https://reacli.github.io/installation/requirements/</link>
-      <pubDate>Mon, 18 Feb 2019 19:33:40 +0100</pubDate>
-      
-      <guid>https://reacli.github.io/installation/requirements/</guid>
-      <description>npm As a requirement, all you need is having npm installed.
-npx You also might want using Reacli thanks to npx, so it can be useful to install it:
-npm install npx  yarn This package can also be installed using yarn.</description>
-    </item>
-    
-    <item>
-      <title>Component architecture</title>
-      <link>https://reacli.github.io/usage/architecture/</link>
-      <pubDate>Mon, 18 Feb 2019 19:57:39 +0100</pubDate>
-      
-      <guid>https://reacli.github.io/usage/architecture/</guid>
-      <description>Architecture Creating a component with no option (reacli component ./my-super-component) will generate the following architecture:
-. └── my-super-component ├── components | ├── MySuperComponent.jsx | ├── MySuperComponent.css | └── MySuperComponentContainer.jsx └── index.js  Let&amp;rsquo;s describe it a bit.
-index.js We created an index.js at the root of the component folder because we believe that whatever implementation it uses, other projects or components using it should not know, or mind the internal implementation.</description>
-    </item>
-    
-    <item>
-      <title>Install</title>
-      <link>https://reacli.github.io/installation/install/</link>
-      <pubDate>Mon, 18 Feb 2019 19:44:08 +0100</pubDate>
-      
-      <guid>https://reacli.github.io/installation/install/</guid>
-      <description> If you want to use Reacli without running npx, it has to be installed globally either with npm or yarn.
-Using npm To install Reacli globally with npm, run:
-npm install -g reacli  Using yarn To install Reacli globally with yarn, run:
-yarn global add reacli  </description>
     </item>
     
     <item>

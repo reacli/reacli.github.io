@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Install :: Reacli</title>
+    <title>Configuration file :: Reacli</title>
 
     
     <link href="/css/nucleus.css?1550854279" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/installation/install/">
+  <body class="" data-url="/options/configfile/">
     <nav id="sidebar" class="">
 
 
@@ -78,7 +78,7 @@
   
     
     <li data-nav-id="/installation/" title="Installation" class="dd-item 
-        parent
+        
         
         
         ">
@@ -121,7 +121,7 @@
  
   
     
-      <li data-nav-id="/installation/install/" title="Install" class="dd-item active">
+      <li data-nav-id="/installation/install/" title="Install" class="dd-item ">
         <a href="/installation/install/">
         Install
         
@@ -218,7 +218,7 @@
   
     
     <li data-nav-id="/options/" title="Options" class="dd-item 
-        
+        parent
         
         
         ">
@@ -318,7 +318,7 @@
  
   
     
-      <li data-nav-id="/options/configfile/" title="Configuration file" class="dd-item ">
+      <li data-nav-id="/options/configfile/" title="Configuration file" class="dd-item active">
         <a href="/options/configfile/">
         Configuration file
         
@@ -428,7 +428,7 @@
             
           
           
-            <a href='/'>Reacli</a> > <a href='/installation/'>Installation</a> > Install
+            <a href='/'>Reacli</a> > <a href='/options/'>Options</a> > Configuration file
           
          
           
@@ -445,14 +445,8 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#using-npm">Using npm</a></li>
-<li><a href="#using-yarn">Using yarn</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#description">Description</a></li>
+<li><a href="#available-options">Available options</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -467,7 +461,7 @@
         
         <div id="body-inner">
           
-            <h1>Install</h1>
+            <h1>Configuration file</h1>
           
 
         
@@ -475,21 +469,52 @@
 
 
 
-<p><em>If you want to use <strong>Reacli</strong> without running <code>npx</code>, it has to be installed globally either with <code>npm</code> or <code>yarn</code>.</em></p>
+<h2 id="description">Description</h2>
 
-<h4 id="using-npm">Using npm</h4>
+<p>Some users might want to use the <em>Reacli</em> CLI to create several components in the same project. Each component might have to be configured with the same options.</p>
 
-<p>To install <strong>Reacli</strong> globally with <code>npm</code>, run:</p>
+<div class="notices tip" ><p>For example, if the project uses <em>Flow</em> for one component, the user might want to use the same option for every component he creates thanks to the CLI.</p>
+</div>
 
-<pre><code class="language-bash">npm install -g reacli
+
+<p>That is the reason why <strong>Reacli</strong> embeds a feature enabling the user to add a <code>.reacli</code> file at the root of the project.</p>
+
+<p>The CLI will then find the root of the project and check if there is a <code>.reacli</code> file there. If that is the case, it will load it and add its content to the options given at runtime.</p>
+
+<p>For example, let&rsquo;s imagine there is a <code>.reacli</code> file like the following.</p>
+
+<pre><code class="language-json">{
+  &quot;flow&quot;: true,
+  &quot;scss&quot;: true
+}
 </code></pre>
 
-<h4 id="using-yarn">Using yarn</h4>
+<p>If the user calls</p>
 
-<p>To install <strong>Reacli</strong> globally with <code>yarn</code>, run:</p>
-
-<pre><code class="language-bash">yarn global add reacli
+<pre><code class="language-bash">reacli component ./my-super-component --redux
 </code></pre>
+
+<p>The generated component will use the following options:</p>
+
+<ul>
+<li><em>Flow</em></li>
+<li><em>SCSS</em></li>
+<li><em>Redux</em></li>
+</ul>
+
+<div class="notices warning" ><p>In the <code>.reacli</code> file, <strong>do not</strong> write options you do not want to use (even with the <code>false</code> value). Options in the <code>.reacli</code> files are prevalent over the ones given to the CLI at runtime.</p>
+</div>
+
+
+<h2 id="available-options">Available options</h2>
+
+<p>Up to now, here are the lines you can write in the <code>.reacli</code> file to select options:</p>
+
+<ul>
+<li><code>&quot;scss&quot;: true</code></li>
+<li><code>&quot;flow&quot;: true</code></li>
+<li><code>&quot;redux&quot;: true</code></li>
+</ul>
 
 
 <footer class=" footline" >
@@ -528,59 +553,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -672,6 +644,58 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -708,6 +732,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -737,10 +762,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/installation/requirements/" title="Requirements"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/options/scss/" title="Scss"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/usage/" title="Usage" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/options/intro/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -750,20 +775,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1550854279"></script>
-    <script src="/js/perfect-scrollbar.min.js?1550854279"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1550854279"></script>
-    <script src="/js/jquery.sticky.js?1550854279"></script>
-    <script src="/js/featherlight.min.js?1550854279"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1550854279"></script>
-    <script src="/js/highlight.pack.js?1550854279"></script>
+    <script src="/js/clipboard.min.js?1550854280"></script>
+    <script src="/js/perfect-scrollbar.min.js?1550854280"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1550854280"></script>
+    <script src="/js/jquery.sticky.js?1550854280"></script>
+    <script src="/js/featherlight.min.js?1550854280"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1550854280"></script>
+    <script src="/js/highlight.pack.js?1550854280"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1550854279"></script>
-    <script src="/js/learn.js?1550854279"></script>
-    <script src="/js/hugo-learn.js?1550854279"></script>
+    <script src="/js/modernizr.custom.71422.js?1550854280"></script>
+    <script src="/js/learn.js?1550854280"></script>
+    <script src="/js/hugo-learn.js?1550854280"></script>
 
-    <link href="/mermaid/mermaid.css?1550854279" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1550854279"></script>
+    <link href="/mermaid/mermaid.css?1550854280" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1550854280"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -17,9 +17,9 @@
       <pubDate>Mon, 18 Feb 2019 19:57:39 +0100</pubDate>
       
       <guid>https://reacli.github.io/usage/usage/</guid>
-      <description> If Reacli is installed globally Once you have Reacli globally installed (see installation), you can directly use it like this:
+      <description>Basic usage If Reacli is installed globally Once you have Reacli globally installed (see installation), you can directly use it like this:
 reacli component path/to/my/component  If you did not install Reacli You don&amp;rsquo;t need to have Reacli installed globally to use it. You can use npx to run it wherever you want:
-npx reacli component path/to/my/component  </description>
+npx reacli component path/to/my/component  Advanced usage Create several components at once You can create several components at once by running the following command:</description>
     </item>
     
     <item>
